@@ -16,3 +16,6 @@ $ psql -U postgres
 $ cd Seiton_ambulanciaForm
 $ psql -U postgres seiton < ambulancia.sql
 ```
+### Contacto
+
+- Consultas o dudas: [mike.bermeo@yachaytech.edu.ec](mailto:mike.bermeo@yachaytech.edu.ec)
