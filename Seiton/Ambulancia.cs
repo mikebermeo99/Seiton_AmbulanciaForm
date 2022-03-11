@@ -11,10 +11,10 @@ using Npgsql;
 
 namespace Seiton
 {
-    public partial class Form5 : Form
+    public partial class Ambulancia : Form
     {
         NpgsqlConnection cn;
-        public Form5()
+        public Ambulancia()
         {
             InitializeComponent();
            
@@ -125,8 +125,8 @@ namespace Seiton
                         textBox37,textBox38, textBox39, textBox40,
                         textBox41,textBox42
                     };
-                        string strsql = "INSERT into datos_form_ambulancia (no_reporte, nombre_entrega) values(";
-                        strsql += "'" + Noregistro.Text + "','" + conductorEntrega.Text + "');";
+                        string strsql = "INSERT into datos_form_ambulancia (no_reporte, nombre_entrega, nombre_recibe, coor_zonal, provincia, unidad_operativa, alfa, hora, fecha, combustible, temperatura, kilometraje, observacion) values(";
+                        strsql += "'" + Noregistro.Value + "','" + conductorEntrega.Text + "','" + conductorRecibe.Text + "','" + coor_zonal.Text + "','" + Provincia.Text + "', '" + Unidad_operativa.Text + "','" + Alfa.Value + "','" + Hora.Text + "','" + Fecha.Value + "','" + combustible.Value + "','" + temperatura.Value + "','" + kilometraje.Value + "','" + observaciones_generales.Text + "');";
                         string strsql2 = "INSERT INTO RESPUESTAS (id_form,id_pregunta,valor,observacion) VALUES";
                         bool valor = new Boolean();
                         string insert_valor = "";

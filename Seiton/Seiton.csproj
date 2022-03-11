@@ -128,16 +128,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form5.cs">
+    <Compile Include="Ambulancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="Ambulancia.Designer.cs">
+      <DependentUpon>Ambulancia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="Ambulancia.resx">
+      <DependentUpon>Ambulancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

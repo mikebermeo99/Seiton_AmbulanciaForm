@@ -1,7 +1,7 @@
 ﻿
 namespace Seiton
 {
-    partial class Form5
+    partial class Ambulancia
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,15 @@ namespace Seiton
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ambulancia));
             this.Consulta = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.temperatura = new System.Windows.Forms.NumericUpDown();
+            this.combustible = new System.Windows.Forms.NumericUpDown();
             this.kilometraje = new System.Windows.Forms.NumericUpDown();
             this.label60 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
@@ -110,7 +112,7 @@ namespace Seiton
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Alfa = new System.Windows.Forms.TextBox();
+            this.coor_zonal = new System.Windows.Forms.NumericUpDown();
             this.label56 = new System.Windows.Forms.Label();
             this.Hora = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
@@ -124,7 +126,6 @@ namespace Seiton
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.conductorRecibe = new System.Windows.Forms.TextBox();
-            this.Noregistro = new System.Windows.Forms.TextBox();
             this.conductorEntrega = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -199,23 +200,24 @@ namespace Seiton
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.combustible = new System.Windows.Forms.NumericUpDown();
-            this.temperatura = new System.Windows.Forms.NumericUpDown();
-            this.coor_zonal = new System.Windows.Forms.NumericUpDown();
+            this.Noregistro = new System.Windows.Forms.NumericUpDown();
+            this.Alfa = new System.Windows.Forms.NumericUpDown();
             this.Consulta.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.temperatura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combustible)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kilometraje)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coor_zonal)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.Limpieza.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.combustible)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperatura)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coor_zonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Noregistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Alfa)).BeginInit();
             this.SuspendLayout();
             // 
             // Consulta
@@ -291,6 +293,40 @@ namespace Seiton
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Otros Datos";
+            // 
+            // temperatura
+            // 
+            this.temperatura.Location = new System.Drawing.Point(211, 111);
+            this.temperatura.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.temperatura.Name = "temperatura";
+            this.temperatura.Size = new System.Drawing.Size(120, 22);
+            this.temperatura.TabIndex = 45;
+            this.temperatura.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // combustible
+            // 
+            this.combustible.Location = new System.Drawing.Point(211, 79);
+            this.combustible.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.combustible.Name = "combustible";
+            this.combustible.Size = new System.Drawing.Size(120, 22);
+            this.combustible.TabIndex = 44;
+            this.combustible.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // kilometraje
             // 
@@ -1121,8 +1157,9 @@ namespace Seiton
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.coor_zonal);
             this.groupBox2.Controls.Add(this.Alfa);
+            this.groupBox2.Controls.Add(this.Noregistro);
+            this.groupBox2.Controls.Add(this.coor_zonal);
             this.groupBox2.Controls.Add(this.label56);
             this.groupBox2.Controls.Add(this.Hora);
             this.groupBox2.Controls.Add(this.Fecha);
@@ -1136,7 +1173,6 @@ namespace Seiton
             this.groupBox2.Controls.Add(this.label53);
             this.groupBox2.Controls.Add(this.label52);
             this.groupBox2.Controls.Add(this.conductorRecibe);
-            this.groupBox2.Controls.Add(this.Noregistro);
             this.groupBox2.Controls.Add(this.conductorEntrega);
             this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.label31);
@@ -1150,13 +1186,22 @@ namespace Seiton
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Generales";
             // 
-            // Alfa
+            // coor_zonal
             // 
-            this.Alfa.Location = new System.Drawing.Point(820, 97);
-            this.Alfa.Margin = new System.Windows.Forms.Padding(4);
-            this.Alfa.Name = "Alfa";
-            this.Alfa.Size = new System.Drawing.Size(174, 22);
-            this.Alfa.TabIndex = 26;
+            this.coor_zonal.Location = new System.Drawing.Point(157, 47);
+            this.coor_zonal.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.coor_zonal.Name = "coor_zonal";
+            this.coor_zonal.Size = new System.Drawing.Size(120, 22);
+            this.coor_zonal.TabIndex = 45;
+            this.coor_zonal.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label56
             // 
@@ -1276,15 +1321,6 @@ namespace Seiton
             this.conductorRecibe.Name = "conductorRecibe";
             this.conductorRecibe.Size = new System.Drawing.Size(318, 22);
             this.conductorRecibe.TabIndex = 7;
-            // 
-            // Noregistro
-            // 
-            this.Noregistro.Location = new System.Drawing.Point(820, 52);
-            this.Noregistro.Margin = new System.Windows.Forms.Padding(4);
-            this.Noregistro.Name = "Noregistro";
-            this.Noregistro.Size = new System.Drawing.Size(174, 22);
-            this.Noregistro.TabIndex = 6;
-            this.Noregistro.TextChanged += new System.EventHandler(this.Noregistro_TextChanged);
             // 
             // conductorEntrega
             // 
@@ -2114,65 +2150,48 @@ namespace Seiton
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // combustible
+            // Noregistro
             // 
-            this.combustible.Location = new System.Drawing.Point(211, 79);
-            this.combustible.Minimum = new decimal(new int[] {
+            this.Noregistro.Location = new System.Drawing.Point(825, 55);
+            this.Noregistro.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.combustible.Name = "combustible";
-            this.combustible.Size = new System.Drawing.Size(120, 22);
-            this.combustible.TabIndex = 44;
-            this.combustible.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // temperatura
-            // 
-            this.temperatura.Location = new System.Drawing.Point(211, 111);
-            this.temperatura.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.temperatura.Name = "temperatura";
-            this.temperatura.Size = new System.Drawing.Size(120, 22);
-            this.temperatura.TabIndex = 45;
-            this.temperatura.Value = new decimal(new int[] {
+            this.Noregistro.Name = "Noregistro";
+            this.Noregistro.Size = new System.Drawing.Size(169, 22);
+            this.Noregistro.TabIndex = 46;
+            this.Noregistro.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // coor_zonal
+            // Alfa
             // 
-            this.coor_zonal.Location = new System.Drawing.Point(157, 47);
-            this.coor_zonal.Minimum = new decimal(new int[] {
+            this.Alfa.Location = new System.Drawing.Point(825, 100);
+            this.Alfa.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.coor_zonal.Name = "coor_zonal";
-            this.coor_zonal.Size = new System.Drawing.Size(120, 22);
-            this.coor_zonal.TabIndex = 45;
-            this.coor_zonal.Value = new decimal(new int[] {
+            this.Alfa.Name = "Alfa";
+            this.Alfa.Size = new System.Drawing.Size(169, 22);
+            this.Alfa.TabIndex = 47;
+            this.Alfa.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // Form5
+            // Ambulancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1013, 469);
+            this.ClientSize = new System.Drawing.Size(1034, 490);
             this.Controls.Add(this.Consulta);
-            this.Name = "Form5";
+            this.Name = "Ambulancia";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.Consulta.ResumeLayout(false);
@@ -2182,18 +2201,20 @@ namespace Seiton
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.temperatura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combustible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kilometraje)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coor_zonal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Limpieza.ResumeLayout(false);
             this.Limpieza.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.combustible)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperatura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coor_zonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Noregistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Alfa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2253,7 +2274,6 @@ namespace Seiton
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox Noregistro;
         private System.Windows.Forms.TextBox conductorEntrega;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
@@ -2359,7 +2379,6 @@ namespace Seiton
         private System.Windows.Forms.TextBox observaciones_generales;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox Alfa;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.TextBox Hora;
         private System.Windows.Forms.DateTimePicker Fecha;
@@ -2372,5 +2391,7 @@ namespace Seiton
         private System.Windows.Forms.NumericUpDown temperatura;
         private System.Windows.Forms.NumericUpDown combustible;
         private System.Windows.Forms.NumericUpDown coor_zonal;
+        private System.Windows.Forms.NumericUpDown Noregistro;
+        private System.Windows.Forms.NumericUpDown Alfa;
     }
 }
